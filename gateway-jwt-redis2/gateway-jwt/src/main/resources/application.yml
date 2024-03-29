@@ -1,0 +1,38 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        - id: AuthService
+          uri: http://localhost:8080
+          predicates:
+            - Path=/AuthService/**
+          filters:
+            - AuthenticationFilter
+
+        - id: Product
+          uri: http://localhost:8081
+          predicates:
+            - Path=/product/**
+
+        - id: Employee
+          uri: http://localhost:8082
+          predicates:
+            - Path=/Employee/**
+
+  application:
+    name: gateway-jwt
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/

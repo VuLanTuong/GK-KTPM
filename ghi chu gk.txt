@@ -1,0 +1,25 @@
+eyJhbGciOiJIUzI1NiJ9.eyJ0aWVuIjp7InVzZXJJZCI6MSwidXNlcm5hbWUiOiJ0dW9uZyIsInBhc3N3b3JkIjoiJDJhJDEwJDZwQUJzaERFajRoVkJnU1NsNjVkRHVJdndQUFUuMWhGMU1jVzZzeGpuWlBhTFdPajlsaXRpIiwiYXV0aG9yaXRpZXMiOltdfSwiZXhwIjoxNzEyNDcxOTAzfQ.trkJloJ_rIaw7Qyq6sH2tM3ntdP7xFcRD7wEilFOV4s
+
+
+redis-cli – To open the Redis interface
+KEYS Customer:* – To get all KEYS associated with Customer
+HGETALL Customer:101 – Get Customer Data associated with id-101
+HSET users:1 id 1 name Alice email alice@example.com - Set user
+FLUSHALL – to clear all the data
+INFO keyspace - to get number of key in database
+
+- khong co chu bearer trong token
+- api nao khong authen thi khai bao trong gateway router validator
+- ten tren eureka phai dung voi ten cua spring.name trong service
+va trong gateway - nen dat chu thuong
+
+{
+"id" : "",
+"username" : "",
+"password" :"",
+"roles" : [
+{
+"id": "",
+"name" : ""},{}
+]
+}
